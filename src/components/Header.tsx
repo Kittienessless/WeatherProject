@@ -1,6 +1,6 @@
 import React from "react";
 
-const Weather = () => {
+const Header = () => {
   return (
     <div  >
       <h1  >Hello world!</h1>
@@ -8,4 +8,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default Header;

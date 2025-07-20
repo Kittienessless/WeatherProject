@@ -1,11 +1,11 @@
 import React from "react";
 
-const Weather = () => {
+const Start = () => {
   return (
-    <div  >
+    <div >
       <h1  >Hello world!</h1>
     </div>
   );
 };
 
-export default Weather;
+export default Start;

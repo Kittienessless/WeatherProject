@@ -1,5 +1,8 @@
-import { createContext, FC, JSX } from "react";
+import { createContext, FC } from "react";
 import Store from "../store/store";
+import { JSX } from "react/jsx-runtime";
+import { ErrorBoundary } from "react-error-boundary";
+import Start from "../components/Start.tsx";
 
 interface State {
   store: Store;
@@ -16,6 +19,8 @@ interface IProviders {
 
 export const Providers: FC<IProviders> = ({ children }) => {
   return (
-    <UserContext.Provider value={{ store }}>{children}</UserContext.Provider>
+    <ErrorBoundary FallbackComponent={Start}>
+      <UserContext.Provider value={{ store }}>{children}</UserContext.Provider>
+    </ErrorBoundary>
   );
 };
